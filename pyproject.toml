@@ -1,0 +1,29 @@
+# pyproject.toml
+
+[tool.ruff]
+# 違反をチェックするルールセットを指定
+# "F" = Pyflakes (未使用のインポートなど)
+# "E" = pycodestyle (PEP 8 スタイル違反)
+# "I" = isort (インポートの並び順)
+select = ["E", "F", "I"]
+
+# 1行の最大文字数 (デフォルトは88)
+line-length = 88
+
+# 無視するルール（オプション）
+# E501 = 1行が長すぎる (line-lengthを超えた)
+ignore = ["E501"]
+
+# チェック対象外のディレクトリ
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
+# ruff format (フォーマッター) の設定
+[tool.ruff.format]
+# ダブルクォート(") ではなくシングルクォート(') を強制する
+quote-style = "single"
